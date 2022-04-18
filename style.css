@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body h2{
+    display: flex;
+    justify-content: flex-start;
+    color: aliceblue;
+    font-size: 1.8rem;
+    margin:0.6rem;
+    padding: 0.8rem;
+  }
+  body {
+    margin: 0;
+    font-family: "nunito", sans-serif;
+    background-color: black;
+  }
+  /* wrapper */
+  body .wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  body .wrapper section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+  
+  }
+  body .wrapper section .row-poster{
+    width: 100%;
+    position: relative;
+    max-width: 100px;
+    max-height: 150px;
+    padding: 0 5px;
+    transition: all 0.5s;
+  }
+  a {
+    font-size: 80px;
+    color: white;
+    
+    text-decoration: none;
+    background-color: rgba(51, 51, 51, 0.3);
+    padding: 0.2rem 0.2rem;
+    margin-top: 1rem;
+  }
+  body .wrapper section .row-poster:hover{
+    margin: 0 20px;
+    transform: scale(1.6);
+  }
+  
+  body .wrapper section a:nth-of-type(1){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  body.wrapper section a:nth-of-type(2){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  #section1{
+    width:100%
+  }
+  
+  
+  #sections{
+    display: flex;
+    width: 100%;
+    overflow: hidden ;
+    scroll-behavior: smooth;
+  }
+  #section1,#section2{
+    width: 100%;
+    min-width: 100%;
+  }
+  /* .wrapper2 */
+  body .wrapper2{
+    display: flex;
+    justify-content: center;
+  }
+  body .wrapper2 section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+  
+  }
+  body .wrapper2 section .row-poster{
+    width: 100%;
+    position: relative;
+    max-width: 100px;
+    max-height: 150px;
+    padding: 0 5px;
+    transition: all 0.5s;
+  }
+  
+  body .wrapper2 section .row-poster:hover{
+    margin: 0 20px;
+    transform: scale(1.6);
+  }
+  
+  body .wrapper2 section a:nth-of-type(1){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  body.wrapper2 section a:nth-of-type(2){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  
+   .wrapper2 #section-b1{
+    width:100%
+  }
+  
+  
+  .wrapper2 #sections-b{
+    display: flex;
+    width: 100%;
+    overflow: hidden ;
+    scroll-behavior: smooth;
+  }
+   .wrapper2 #section-b1,#section-b2{
+    width: 100%;
+    min-width: 100%;
+  }
+  /* .wrapper3 */
+  body .wrapper3{
+    display: flex;
+    justify-content: center;
+  }
+  body .wrapper3 section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+  
+  }
+  body .wrapper3 section .row-poster{
+    width: 100%;
+    position: relative;
+    max-width: 100px;
+    max-height: 150px;
+    padding: 0 5px;
+    transition: all 0.5s;
+  }
+  
+  body .wrapper3 section .row-poster:hover{
+    margin: 0 20px;
+    transform: scale(1.6);
+  }
+  
+  body .wrapper3 section a:nth-of-type(1){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  body.wrapper3 section a:nth-of-type(2){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  
+   .wrapper3 #section-c1{
+    width:100%
+  }
+  
+  
+  .wrapper3 #sections-c{
+    display: flex;
+    width: 100%;
+    overflow: hidden ;
+    scroll-behavior: smooth;
+  }
+   .wrapper3 #section-c1,#section-c2{
+    width: 100%;
+    min-width: 100%;
+  }
+  /* wrapper4 */
+  body .wrapper4{
+    display: flex;
+    justify-content: center;
+  }
+  body .wrapper4 section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+  
+  }
+  body .wrapper4 section .row-poster{
+    width: 100%;
+    position: relative;
+    max-width: 100px;
+    max-height: 150px;
+    padding: 0 5px;
+    transition: all 0.5s;
+  }
+  
+  body .wrapper4 section .row-poster:hover{
+    margin: 0 20px;
+    transform: scale(1.6);
+  }
+  
+  body .wrapper4 section a:nth-of-type(1){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  body.wrapper4 section a:nth-of-type(2){
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  
+   .wrapper4 #section-d{
+    width:100%
+  }
+  
+  
+  .wrapper4 #sections-d{
+    display: flex;
+    width: 100%;
+    overflow: hidden ;
+    scroll-behavior: smooth;
+  }
+   .wrapper4 #section-d1,#section-d2{
+    width: 100%;
+    min-width: 100%;
+  }
+  .banner {
+    background-image: url(https://cultmtl.com/wp-content/uploads/2020/06/2iqZ3ZXhnQLGGRKIiuvayODKpTD.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    object-fit: contain;
+    height: 550px;
+    z-index: -1;
+  }
+  .banner-contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+  }
+  .banner-title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+  }
+  .banner-description {
+    width: 45rem;
+    /* line-height: 1.4; */
+    padding-top: 1.4rem;
+    font-size: 1rem;
+    max-width: 360px;
+    height: 200px;
+  }
+  .banner-button {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+  }
+  .banner-button:hover {
+    color: black;
+    background-color: cornsilk;
+    transition: all 0.2s;
+  }
+  .banner-fadeBottom {
+    margin-top: 145px;
+    height: 16rem;
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
+  }
+  .nav-logo {
+    width: 80px;
+    object-fit: contain;
+  }
+  .nav-avatar {
+    width: 30px;
+    object-fit: contain;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+  }
+  .nav__black {
+    background-color: #111;
+  }
+  @media only screen and (max-width: 600px) {
+    a {
+      display:none;
+    }
+  }
+  footer{
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 300;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+  }
