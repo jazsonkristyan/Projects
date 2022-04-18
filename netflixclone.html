@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30" type="image/png" sizes="16x16">
+  </head>
+  <body>
+    <!-- nav section -->
+
+    <div id="nav" class="nav">
+      <img
+        class="nav-logo"
+        src="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30"
+        alt=""
+      />
+      <img
+        class="nav-avatar"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEUNfoD///8Ae30Adnnp9PS/1NU7jpAAeHpAkJLw+PhZnZ6eysv0+voAc3UAf4H5/Px/rq+Lv8Bdpaba6+vg8PB4r6+VwsPJ29vN4+Pq8vKqzs+/29xxr7AZhog2jY5Om51npaaMtba22NkykpSDt7fR5ORNlpiuzM0fjI5On6HT6Oiq0tNso6RcnZ6HuLmSxMSewsP8n7NkAAAIoElEQVR4nO2di3ajKhRAEU2IeWijxhgVtZp329z8/9ddTN9NVFB8Me6uNWtmdYzsoHA4IgAwMDAwMDAwMDDwTwDzqXJ8A6WnAE09XcpCdcOiYmq2lXGwddEaMSgAJkqmX4qi5Stqbs7BdkMSuciHXEFJcnIV4T7vC7KCDlyo8qjAUHJzDadqzqHKuBeGko+yDxfDcD7NLqcYhtIZZxZUEEPJEd5QsrNKKoyhvspobYQxlOaTx2UVx1AyH7c2AhlK3sPDRTKU7MWDw4UylFYPiiuWofpgJCWWoWTdDzMEM5TiuyGtaIb3sY1whncjKfEMlfC3oniGkvm70AIaSp7whtL1Z6mFNNQvP25FIQ0lKfkut6CG6vdgUVBDafcVvolqKMXCG0rLj6KLa6hH7w2quIaS+t6gCmwoObfUlMiG7+Gb0IbSFoluOI+g4IaSEkDBDaWd8IbSQXhD3d8Lbijp254bmoWK8+zpRr0wnNmFinn0wRDGohvKOH9SWP8NEQzzmhIRDAFciW4I5PKtTU8MAfBEN4S4uFvstyGAx7nghgBtRTcs29r0yBCgUq1NnwxhcBbcEMDcgaAIhgBFohsCuBTdsERs0ztDmTW26Z0hDBkHi70zBDDKy8qIYAgWbLFNDw2BxpS36aMh1BzBDUn4xhDb9NIQIINesZ+GANIPFntqCGTq1qavhhDTtjZ9NQQwoczb9NYQoBOdYn8NAbyIbghg3mv4QhgCsBPdEE6yFosQxRCgsHgk1W9DIBfnbfpgKOccCmf9MMxd+WObU4cUI6lOrPwBk5yhgplfQhgUtDadWL2FtBie8hgr3hdUAZy4VsbBhHPmOgUNA7Xx5CFjUFhCCIPHx6Z04RL9oMoyT51fJWpgYGBgYGBgYGBgYGBgYKBe3vMACFVOBSAZkU/pRFLhQwnJMsIYT5IwilbPz5eKn6odRra9MozkeJQXBFn+Mq5V+vMM6GaUnnmhHY8nw1ja1/V6Z5qmZSnz9MU3peKZ5PXP/OXZPL+8zC6X1evr234fBIGmaWkZeFTytxDUNBwEk/3+9fV1e1m+vMRnM3tCnFXxvL8Nf6Crqnk+e543Gh2I8imtZXirY5m5juGthvDpdLpcLqPRyPMc82ypdNP8ajP8K6zrc4LqeN7sv2UUGZPJOAgwnWCySY+dk8+gO1krho+kFeWa99ji2zAsfY52DQnPdIZBlXN4FQ1R0aLyeWSuHvwHXMUwrmrIPv38h6FPd3ZM8cA76xSzfTXBdKKdU/K1LEkyM5ZHvldcbkqdwLJB9ZgGQBDFpRzNK/3DIzm5sL/B520x3V1Q7KgFNut3rJs+ZokBIMKGw9BZ6OpyX7BzBpsjgqsRw81ijQzE/PVCObF3dJLWIeJxef4GwcmKctaks52UC+FIRU7twkhGnUXjekJiiGTNH5n596S12+JFha8XosXxsjYz5gao5nqZkI+vM+RHQWRnNjxndzUBlW9+En4H02fX+VOZijd7ngYcxoOF508D6sCfmZuNmkaSKaqysbztCQNeAyoyyEg/KDR8f+a6tr81ks9TNwSE8gIcw2h1ww8TTAbK/M+ejqbkj9EZ9w+nOv8wqWBATMS+oElnh08NtPctQQKWie/o+ua/KRawbSLNfmh/7bF3PkRYqJokNRZsfwdi8413EqUmIdLCy8OXuPV4u4d9r8q0aVnuskcLynpZKU5vGdK07LfFI3dzOe3lTUmGWqcrZYZHd65Gz/oQCPFkabEksPXNLMT8h+31kDYtV5bXmT+x3NVR7rwj6QCS5absGnT6xjO4jTHrgDQtb3aZhXZ+4V0mWicv1zRqOewqrCD4jbWzj3UMqKtAgpbpjIvdJ+a2Q30IRCByK1+c95A+ROtAy0M6hnC2KfNkk4L5xg3T9FaLeghHbtkVAylRSB/Cnj/nYkeallNckB/mgm6tfdh4y0Oalle3pmvzIc5231wfAqEMo0PNF+c96tpOGhmHINIxlHueyAFzGTI9s2MHynjlln8kzQPnYOCa+pD0u/O9ujoGBtI+pIboFaLkqbWL8x7l5Sng2IWkTYuxbvfivMfa8atF6oe/zWLxqkQ4abxjoIOf4an9xuUhHjfDI9dhET9ibk0N7qhh3pobbMjlZmT9Za6qKtfuxuZmuChdh9Y5jme2/XTjbUp+3v96sW07jmPLqmR84dZbyKxLx84Va+f6aQRZjJac/K27Nq2Nwqr71JahdY0SvLhNn/gWQd/8md9w+6W8wEkYXdjWb33lZ1i4jMwvDumcpfSZkgYwDsbjiUHwl19E6b/H43GAMSb/B6J31/RPprBJnXIzZJxEeyD1Yayer27smUrOLawqluO57vW6isKjtkhn+DMZKiE3Q+gzGVo7S1GZnlmQ+9Y0vaWRMF2lBWvfMBkaTIZNwdOw0ssCteHQvcxBZThuW+YhjsbPMOhk6L3mOAKutClVbYzyFkpjNezkAJHujSM6tNK7GdUJv8C7q4aU7+PQQbXWaNMYPN+26KQhv6CNBKbXtm0ecRTekF9Ik+5K0Z1k9zcLnoZ+B4OaOVdD1s1TmsDhGNL8A4ZV3mKtDX7Z0pthBwNTvoaog4a5KxQzs+igoc/VkH7LjeaIuD7lZsyYNsIbV0NEt1dDk+hFy0yzwZgxbQKFdjEDSsPuZUw5r9YOk7aF7uCYLb0ZHtsWuoOzIZDbFroj5pcPvoE6N3zibti50PvAedowqmGiejW4G3YtbNP5Bt7E8KVtpT/wNyy3NXp9zE+cp5eW2I65XvgbPrWt9AeVZz64k4YbziENgG8dywlvuM/ynnZsfuKGZz74ZkizDVyTmFyzpalh0LFcVMzbEGCa3QobxOX+NhvTXtMNsORuCCstY8ofvtnSlPw9AJuH50P8dyot1FoDPB/ifxh2LDDlv+lc1zKmvIO2zmVM1RoMuzXH1OIu2LWMqcPfEGhtS/3CYyj5//58vnDX1uZVAAAAAElFTkSuQmCC"
+        alt=""
+      />
+    </div>
+
+    <!-- header -->
+    <header class="banner">
+      <div class="banner-contents">
+        <h1 class="banner-title">F is for family</h1>
+        <div class="banner-buttons">
+          <button class="banner-button">Play</button>
+          <button class="banner-button">My List</button>
+        </div>
+        <h1 class="banner-description">
+          Frank is trying to overcome his hurdles and problems to bring the
+          Murphy family together.
+        </h1>
+      </div>
+      <div class="banner-fadeBottom"></div>
+    </header>
+    <!-- Netflix originals section -->
+    <h2>NETFLIX ORIGINALS</h2>
+    
+    </div>
+    <div class="wrapper">
+      <a href="#section1"></a>
+      <div id="sections">
+        <section id="section1">
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/4EYPN5mVIhKLfxGruy7Dy41dTVn.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/2ST6l4WP7ZfqAetuttBqx8F3AAH.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/3NTAbAiao4JLzFQw6YxP1YZppM8.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/uTFX9V2dct1nKjG6zhNiThPm8Tp.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/uTFX9V2dct1nKjG6zhNiThPm8Tp.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/ptAe2rs9MdBlaLqR4FTpfgQI5dT.jpg"
+            alt=""
+          />
+          
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/vIhyANmvTiBjlmX0Uy48Z9AD24j.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w220_and_h330_face/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/vIhyANmvTiBjlmX0Uy48Z9AD24j.jpg"
+            alt=""
+            />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/xUtOM1QO4r8w8yeE00QvBdq58N5.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/kTs2WNZOukpWdNhoRlH94pSJ3xf.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/btZ7EjWaap6bdPTGKefn9rsc4Ok.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/rgMfhcrVZjuy5b7Pn0KzCRCEnMX.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/rgMfhcrVZjuy5b7Pn0KzCRCEnMX.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/4CkQvdUAtoLW3qkjWi7t1MTnW7R.jpg"
+            alt=""
+          />
+        </section>
+        <section id="section2">
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/vRPDQP51i1Z2RuoIQaxVSj7Pd5R.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/vRPDQP51i1Z2RuoIQaxVSj7Pd5R.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/4Bph0hhnDH6dpc0SZIV522bLm4P.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/nlTUgbZY1E4Dr5B25zLLkudIaV.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/MoEKaPFHABtA1xKoOteirGaHl1.jpg"
+            alt=""
+          />
+          
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/o7uk5ChRt3quPIv8PcvPfzyXdMw.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/opHopqkLzkftwUl4jTLcwckjuu.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/onPkMMtzcJs9A6vKljNBa3ujI8g.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/asDqvkE66EegtKJJXIRhBJPxscr.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/oHj6guMrLfQcBzo3uxwBJc8Y736.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/mYsWyfiIMxx4HDm0Wck7oJ9ckez.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/jWTDtbp2TnUGw1OJoDqq2O9IS0M.jpg"
+            alt=""
+          />
+
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/34FaY8qpjBAVysSfrJ1l7nrAQaD.jpg"
+            alt=""
+          />
+          <img
+            class="row-poster row-posterLarge"
+            src="https://www.themoviedb.org/tv/61222"
+            alt=""
+          />
+
+          <!-- <img
+            class="row-poster row-posterLarge"
+            src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+            alt=""
+          /> -->
+        </section>
+      </div>
+      <a href="#section2">></a>
+   </div>
+   <!-- Trending now section -->
+   <h2>Trending Now</h2>
+   <div class="wrapper2">
+    <a href="#section-b1"><</a>
+    <div id="sections">
+      <section id="section-b1">
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMmI1YTNlNjUtMjk4NS00YWZiLWI5NjktZjY5ZjRhZDJmMzQ2XkEyXkFqcGdeQXVyNjgxNTAwNjQ@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMjIyODA1MzYyM15BMl5BanBnXkFtZTgwMjQxODYyODE@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTQ2MzUwODQzMF5BMl5BanBnXkFtZTgwMTA5MDM0ODE@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTYyNDY2NzAxNV5BMl5BanBnXkFtZTgwOTMxMzg2ODE@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMDdlYWI3YWMtZmNhMC00NzZhLWI2ZWMtNjZmZDE2ZDYzMzRmXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMjQxNjAxMzI5Ml5BMl5BanBnXkFtZTgwMzE2NjA5OTE@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BN2E1YmYwOTAtMjdkNS00ZGJjLTk3MmQtYzZkNWQwNmM0Mjg5L2ltYWdlXkEyXkFqcGdeQXVyMzMxODMxNjk@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/M7SUK85sKjaStg4TKhlAVyGlz3.jpg"
+          alt=""
+          />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/jZiSWDKNceZ90KQlFfkx6Tud3Pv.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/6vcDalR50RWa309vBH1NLmG2rjQ.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/zvUNFeTz0Sssb210wSiIiHRjA4W.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/1JRRvx5RotvWM1maeq9r82ktdHi.jpg"
+          alt=""
+        />
+      </section>
+      <section id="section-b2">
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNDU3Mzk0ODAtMzI0Ni00YTUzLWIyNDctMDE3OTE3OTk4OWE2XkEyXkFqcGdeQXVyNTM0MDc1ODE@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTY1NDIwMjQ1OF5BMl5BanBnXkFtZTgwMzUzMjI4MTI@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzIyMzA5MDU3M15BMl5BanBnXkFtZTgwNjk1MjA4MTI@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNWMzZTE4NTYtOGRiNi00YzQ2LWJiNjctMzk1NDU4NmY5ZGQwXkEyXkFqcGdeQXVyODIyMzA4NDc@._V1_UY209_CR1,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTU3MTQyNDEyN15BMl5BanBnXkFtZTgwMjE3NjgzNDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTg3OTQyODAwOF5BMl5BanBnXkFtZTgwMDY1MDM0NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTc5MzIyMDk5Ml5BMl5BanBnXkFtZTgwMzA5MTA4NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzdmNjljMGMtZDBlZC00N2NjLTgyMTctMzU5M2VhYTkzYjRlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BYzM3OGM1OGUtMzE0Yi00OGM2LWFlNjItMGIwNmE4ODhkY2E2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627380012561-f27ffa4217fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627401749819-00c19b1d0412?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+      </section>
+    </div>
+    <a href="#section-b2">></a>
+  </div>
+    <!-- Comedy section -->
+    <h2>COMEDY</h2>
+    <div class="wrapper3">
+     <a href="#section-c1"><</a>
+     <div id="sections-c">
+       <section id="section-c1">
+        <img
+        class="row-poster row-posterLarge"
+        src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BNDU3Mzk0ODAtMzI0Ni00YTUzLWIyNDctMDE3OTE3OTk4OWE2XkEyXkFqcGdeQXVyNTM0MDc1ODE@._V1_UX140_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTY1NDIwMjQ1OF5BMl5BanBnXkFtZTgwMzUzMjI4MTI@._V1_UY209_CR4,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMzIyMzA5MDU3M15BMl5BanBnXkFtZTgwNjk1MjA4MTI@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BNWMzZTE4NTYtOGRiNi00YzQ2LWJiNjctMzk1NDU4NmY5ZGQwXkEyXkFqcGdeQXVyODIyMzA4NDc@._V1_UY209_CR1,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTU3MTQyNDEyN15BMl5BanBnXkFtZTgwMjE3NjgzNDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTg3OTQyODAwOF5BMl5BanBnXkFtZTgwMDY1MDM0NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTc5MzIyMDk5Ml5BMl5BanBnXkFtZTgwMzA5MTA4NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMzdmNjljMGMtZDBlZC00N2NjLTgyMTctMzU5M2VhYTkzYjRlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BYzM3OGM1OGUtMzE0Yi00OGM2LWFlNjItMGIwNmE4ODhkY2E2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR4,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627380012561-f27ffa4217fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627401749819-00c19b1d0412?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+       </section>
+       <section id="section-c2">
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNDU3Mzk0ODAtMzI0Ni00YTUzLWIyNDctMDE3OTE3OTk4OWE2XkEyXkFqcGdeQXVyNTM0MDc1ODE@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTY1NDIwMjQ1OF5BMl5BanBnXkFtZTgwMzUzMjI4MTI@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzIyMzA5MDU3M15BMl5BanBnXkFtZTgwNjk1MjA4MTI@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNWMzZTE4NTYtOGRiNi00YzQ2LWJiNjctMzk1NDU4NmY5ZGQwXkEyXkFqcGdeQXVyODIyMzA4NDc@._V1_UY209_CR1,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTU3MTQyNDEyN15BMl5BanBnXkFtZTgwMjE3NjgzNDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTg3OTQyODAwOF5BMl5BanBnXkFtZTgwMDY1MDM0NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTc5MzIyMDk5Ml5BMl5BanBnXkFtZTgwMzA5MTA4NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzdmNjljMGMtZDBlZC00N2NjLTgyMTctMzU5M2VhYTkzYjRlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BYzM3OGM1OGUtMzE0Yi00OGM2LWFlNjItMGIwNmE4ODhkY2E2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627380012561-f27ffa4217fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627401749819-00c19b1d0412?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+       </section>
+     </div>
+     <a href="#section-c2">></a>
+   </div>
+
+    <!-- Horror Movies -->
+    <h2>HORROR</h2>
+    <div class="wrapper4">
+     <a href="#section-d1"><</a>
+     <div id="sections-d">
+       <section id="section-d1">
+        <img
+        class="row-poster row-posterLarge"
+        src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BNDU3Mzk0ODAtMzI0Ni00YTUzLWIyNDctMDE3OTE3OTk4OWE2XkEyXkFqcGdeQXVyNTM0MDc1ODE@._V1_UX140_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTY1NDIwMjQ1OF5BMl5BanBnXkFtZTgwMzUzMjI4MTI@._V1_UY209_CR4,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMzIyMzA5MDU3M15BMl5BanBnXkFtZTgwNjk1MjA4MTI@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BNWMzZTE4NTYtOGRiNi00YzQ2LWJiNjctMzk1NDU4NmY5ZGQwXkEyXkFqcGdeQXVyODIyMzA4NDc@._V1_UY209_CR1,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTU3MTQyNDEyN15BMl5BanBnXkFtZTgwMjE3NjgzNDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTg3OTQyODAwOF5BMl5BanBnXkFtZTgwMDY1MDM0NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMTc5MzIyMDk5Ml5BMl5BanBnXkFtZTgwMzA5MTA4NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BMzdmNjljMGMtZDBlZC00N2NjLTgyMTctMzU5M2VhYTkzYjRlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://m.media-amazon.com/images/M/MV5BYzM3OGM1OGUtMzE0Yi00OGM2LWFlNjItMGIwNmE4ODhkY2E2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR4,0,140,209_AL_.jpg"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627380012561-f27ffa4217fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627401749819-00c19b1d0412?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+        alt=""
+      />
+
+      <img
+        class="row-poster row-posterLarge"
+        src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+        alt=""
+      />
+       </section>
+       <section id="section-d2">
+        <img
+          class="row-poster row-posterLarge"
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face/qmddUxRwbsxHa7oEXm4PWh1KZe8.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNDU3Mzk0ODAtMzI0Ni00YTUzLWIyNDctMDE3OTE3OTk4OWE2XkEyXkFqcGdeQXVyNTM0MDc1ODE@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTY1NDIwMjQ1OF5BMl5BanBnXkFtZTgwMzUzMjI4MTI@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzIyMzA5MDU3M15BMl5BanBnXkFtZTgwNjk1MjA4MTI@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BNWMzZTE4NTYtOGRiNi00YzQ2LWJiNjctMzk1NDU4NmY5ZGQwXkEyXkFqcGdeQXVyODIyMzA4NDc@._V1_UY209_CR1,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTU3MTQyNDEyN15BMl5BanBnXkFtZTgwMjE3NjgzNDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTg3OTQyODAwOF5BMl5BanBnXkFtZTgwMDY1MDM0NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMTc5MzIyMDk5Ml5BMl5BanBnXkFtZTgwMzA5MTA4NDM@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BMzdmNjljMGMtZDBlZC00N2NjLTgyMTctMzU5M2VhYTkzYjRlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://m.media-amazon.com/images/M/MV5BYzM3OGM1OGUtMzE0Yi00OGM2LWFlNjItMGIwNmE4ODhkY2E2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR4,0,140,209_AL_.jpg"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627380012561-f27ffa4217fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627401749819-00c19b1d0412?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627386173398-5e8f2dff25f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+          alt=""
+        />
+
+        <img
+          class="row-poster row-posterLarge"
+          src="https://images.unsplash.com/photo-1627392452746-c19a03d31130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+       </section>
+     </div>
+     <a href="#section-d2">></a>
+   </div>
+   <footer>
+     <div>
+       <ul> 2022 Jazson &copy</ul>
+     </div>
+   </footer>
+    
+    
+  </body>
+</html>
